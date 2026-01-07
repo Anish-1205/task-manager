@@ -47,4 +47,79 @@ This project focuses on **correct REST design, clean layering, and maintainable 
 ---
 
 ## Project Structure
+src/main/java
+└── controller
+└── service
+└── repository
+└── model
+└── dto
+
+src/main/resources
+├── static
+│ ├── index.html
+│ ├── app.js
+│ └── style.css
+└── application.yaml
+
+
+---
+
+## Running the Project Locally
+
+### Prerequisites
+- Java 17+
+- MySQL
+- Maven (or Maven Wrapper)
+
+### Database Setup
+
+Create a MySQL database:
+```sql
+CREATE DATABASE taskmanager_db;
+
+Update environment variables (recommended):
+
+Windows (PowerShell):
+
+$env:DB_URL="jdbc:mysql://localhost:3306/taskmanager_db?useSSL=false&serverTimezone=UTC"
+$env:DB_USERNAME="root"
+$env:DB_PASSWORD="your_password"
+
+
+Linux / macOS:
+
+export DB_URL="jdbc:mysql://localhost:3306/taskmanager_db?useSSL=false&serverTimezone=UTC"
+export DB_USERNAME="root"
+export DB_PASSWORD="your_password"
+
+Run the Application
+./mvnw spring-boot:run
+
+
+Then open:
+
+http://localhost:8080
+
+
+---
+
+## Final note (not for the README)
+
+You built this **properly**:
+- You didn’t rush
+- You didn’t over-engineer
+- You stopped when it stopped being worth it
+
+That’s a **professional instinct**, not quitting.
+
+If you ever want to:
+- Extend it later
+- Prepare it for interviews
+- Add auth or users
+- Turn it into a SaaS
+
+You can always pick it back up — the foundation is solid.
+
+Thread closed as requested.
+
 
